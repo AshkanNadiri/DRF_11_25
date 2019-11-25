@@ -4,7 +4,7 @@ from .models import Branch, Customer, Account
 
 class BranchSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        models = Branch
+        model = Branch
         fields = [ 'branch_name', 'branch_location']
 
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
@@ -14,7 +14,7 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
 
 class AccountSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        models = Account
+        model = Account
         fields = ['customer','account_balance']
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
